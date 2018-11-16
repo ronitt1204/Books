@@ -1,6 +1,6 @@
-public class Books {
+public class Books implements Comparable <Books>{
     private String bookName, bookAuthor;
-    int price;
+    double price;
 
     public Books(String bookName, String bookAuthor, double price) {
         setBookName(bookName);
@@ -25,7 +25,7 @@ public class Books {
         this.bookAuthor = bookAuthor;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
@@ -35,7 +35,7 @@ public class Books {
 
     @Override
     public int compareTo(Books books) {
-        if (this.getPrice() > bookss.getPrice())
+        if (this.getPrice() > books.getPrice())
 
             return 1;
 
@@ -43,7 +43,7 @@ public class Books {
             return -1;
     }
 
-       public toString(){
-        System.out.println("Book Name: " + boookName + "Author: " + bookAuthor + "Price: " + price);
+       public String toString(){
+        return String.format("Book Name: " + bookName + "Author: " + bookAuthor + "Price: " + price);
        }
 }
