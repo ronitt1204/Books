@@ -43,5 +43,7 @@ public class Books {
             return -1;
     }
 
-  
+       public toString(){
+        System.out.println("Book Name: " + boookName + "Author: " + bookAuthor + "Price: " + price);
+       }
 }
